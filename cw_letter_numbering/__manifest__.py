@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "CW Letter Numbering",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "summary": "Automatic and configurable letter numbering for Odoo",
     "description": """
 CW Letter Numbering
@@ -37,4 +37,6 @@ Features:
     ],
     "installable": True,
     "application": True,
+    "price": 21.99,
+    "currency": "USD",
 }
