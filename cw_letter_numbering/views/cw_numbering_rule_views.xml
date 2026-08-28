@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cw_numbering_rule_tree" model="ir.ui.view">
+        <field name="name">cw.numbering.rule.tree</field>
+        <field name="model">cw.numbering.rule</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="priority"/>
+                <field name="name"/>
+                <field name="letter_type_id"/>
+                <field name="company_id"/>
+                <field name="department_id"/>
+                <field name="user_id"/>
+                <field name="format_string"/>
+                <field name="reset_period"/>
+                <field name="next_number"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_cw_numbering_rule_form" model="ir.ui.view">
+        <field name="name">cw.numbering.rule.form</field>
+        <field name="model">cw.numbering.rule</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="letter_type_id"/>
+                            <field name="company_id"/>
+                            <field name="priority"/>
+                            <field name="active"/>
+                        </group>
+                        <group>
+                            <field name="department_id"/>
+                            <field name="user_id"/>
+                            <field name="reset_period"/>
+                            <field name="padding"/>
+                            <field name="next_number"/>
+                        </group>
+                    </group>
+                    <group string="Number Format">
+                        <field name="prefix"/>
+                        <field name="format_string"/>
+                        <field name="suffix"/>
+                        <field name="preview" readonly="1"/>
+                    </group>
+                    <separator string="Tokens: {SEQ}, {YEAR}, {MONTH}, {MONTH_ROMAN}, {DAY}, {USER}, {USER_CODE}, {DEPT}, {DEPT_CODE}, {COMPANY}, {COMPANY_CODE}, {TYPE}, {TYPE_CODE}"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_cw_numbering_rule" model="ir.actions.act_window">
+        <field name="name">Numbering Rules</field>
+        <field name="res_model">cw.numbering.rule</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

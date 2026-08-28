@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cw_letter_tree" model="ir.ui.view">
+        <field name="name">cw.letter.tree</field>
+        <field name="model">cw.letter</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="letter_type_id"/>
+                <field name="subject"/>
+                <field name="user_id"/>
+                <field name="department_id"/>
+                <field name="company_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+    <record id="view_cw_letter_form" model="ir.ui.view">
+        <field name="name">cw.letter.form</field>
+        <field name="model">cw.letter</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_generate_number" type="object"
+                            string="Generate Number" class="btn-primary"
+                            invisible="name"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            invisible="state == 'cancel'"/>
+                    <button name="action_reset_to_draft" type="object"
+                            string="Reset to Draft"
+                            invisible="state != 'cancel'"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,done,cancel"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" readonly="1"/>
+                            <field name="letter_type_id"/>
+                            <field name="date"/>
+                            <field name="subject"/>
+                        </group>
+                        <group>
+                            <field name="user_id"/>
+                            <field name="department_id"/>
+                            <field name="company_id"/>
+                        </group>
+                    </group>
+                    <field name="note" placeholder="Letter notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_cw_letter" model="ir.actions.act_window">
+        <field name="name">Letters</field>
+        <field name="res_model">cw.letter</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Category -->
+    <record id="module_category_cw_letter_numbering" model="ir.module.category">
+        <field name="name">Letter Numbering</field>
+        <field name="description">Letter Numbering Access</field>
+        <field name="sequence">50</field>
+    </record>
+
+    <!-- User -->
+    <record id="group_letter_numbering_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="cw_letter_numbering.module_category_cw_letter_numbering"/>
+    </record>
+
+    <!-- Manager -->
+    <record id="group_letter_numbering_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="cw_letter_numbering.module_category_cw_letter_numbering"/>
+        <field name="implied_ids" eval="[(4, ref('cw_letter_numbering.group_letter_numbering_user'))]"/>
+    </record>
+
+</odoo>

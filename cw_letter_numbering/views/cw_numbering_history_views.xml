@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_cw_numbering_history_tree" model="ir.ui.view">
+        <field name="name">cw.numbering.history.tree</field>
+        <field name="model">cw.numbering.history</field>
+        <field name="arch" type="xml">
+            <tree create="0" edit="0" delete="0">
+                <field name="name"/>
+                <field name="letter_type_id"/>
+                <field name="rule_id"/>
+                <field name="user_id"/>
+                <field name="department_id"/>
+                <field name="company_id"/>
+                <field name="period_key"/>
+                <field name="generated_at"/>
+                <field name="document_name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_cw_numbering_history" model="ir.actions.act_window">
+        <field name="name">Number History</field>
+        <field name="res_model">cw.numbering.history</field>
+        <field name="view_mode">tree</field>
+    </record>
+</odoo>

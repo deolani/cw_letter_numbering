@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cw_letter_type_user,cw.letter.type user,model_cw_letter_type,cw_letter_numbering.group_letter_numbering_user,1,0,0,0
+access_cw_letter_type_manager,cw.letter.type manager,model_cw_letter_type,cw_letter_numbering.group_letter_numbering_manager,1,1,1,1
+access_cw_numbering_rule_user,cw.numbering.rule user,model_cw_numbering_rule,cw_letter_numbering.group_letter_numbering_user,1,0,0,0
+access_cw_numbering_rule_manager,cw.numbering.rule manager,model_cw_numbering_rule,cw_letter_numbering.group_letter_numbering_manager,1,1,1,1
+access_cw_numbering_history_user,cw.numbering.history user,model_cw_numbering_history,cw_letter_numbering.group_letter_numbering_user,1,0,0,0
+access_cw_numbering_history_manager,cw.numbering.history manager,model_cw_numbering_history,cw_letter_numbering.group_letter_numbering_manager,1,1,1,1
+access_cw_letter_user,cw.letter user,model_cw_letter,cw_letter_numbering.group_letter_numbering_user,1,1,1,0
+access_cw_letter_manager,cw.letter manager,model_cw_letter,cw_letter_numbering.group_letter_numbering_manager,1,1,1,1

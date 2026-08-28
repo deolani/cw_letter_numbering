@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_cw_letter_root" name="Letter Numbering" sequence="50" groups="cw_letter_numbering.group_letter_numbering_user"/>
+        <menuitem id="menu_cw_letter" name="Letters" parent="menu_cw_letter_root" action="action_cw_letter" sequence="10" groups="cw_letter_numbering.group_letter_numbering_user"/>
+        <menuitem id="menu_cw_letter_config" name="Configuration" parent="menu_cw_letter_root" sequence="90" groups="cw_letter_numbering.group_letter_numbering_manager"/>
+            <menuitem id="menu_cw_letter_type" name="Letter Types" parent="menu_cw_letter_config" action="action_cw_letter_type" sequence="10" groups="cw_letter_numbering.group_letter_numbering_manager"/>
+            <menuitem id="menu_cw_numbering_rule" name="Numbering Rules" parent="menu_cw_letter_config" action="action_cw_numbering_rule" sequence="20" groups="cw_letter_numbering.group_letter_numbering_manager"/>
+            <menuitem id="menu_cw_numbering_history" name="Number History" parent="menu_cw_letter_config" action="action_cw_numbering_history" sequence="30" groups="cw_letter_numbering.group_letter_numbering_user"/>
+
+</odoo>
