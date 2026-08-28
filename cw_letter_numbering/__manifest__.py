@@ -8,6 +8,16 @@ CW Letter Numbering
 ===================
 Configurable letter numbering with company, department and user rules.
 Supports custom tokens, reset periods and numbering history.
+
+Features:
+- Custom letter numbering
+- Company-based numbering
+- Department-based numbering
+- User-based numbering
+- Custom numbering tokens
+- Configurable reset periods
+- Numbering history
+
 """,
     "category": "Productivity",
     "author": "CORE Warehouse Technology",
