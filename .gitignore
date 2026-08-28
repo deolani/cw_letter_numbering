@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Odoo
+*.log
+
+# ZIP packages
+*.zip
+
+# Windows shortcuts
+*.lnk
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
