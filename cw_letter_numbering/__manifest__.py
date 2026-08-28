@@ -32,6 +32,9 @@ Features:
         "views/cw_letter_views.xml",
         "views/menus.xml",
     ],
+    "images": [
+    "static/description/icon.png",
+    ],
     "installable": True,
     "application": True,
 }
